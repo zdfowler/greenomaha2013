@@ -1,0 +1,389 @@
+/*
+Theme Name: Green Omaha 2013
+Theme URI: http://teamtreehouse.com/wordpress-bootstrap-theme-tutorial
+Description: A demo theme built to accompany the Treehouse blog post <a href="http://teamtreehouse.com/wordpress-bootstrap-theme-tutorial">How to Build a WordPress Theme with Bootstrap</a>.
+Author: Zac Fowler, Kara Kammerer
+Author URI: http://attic.ist.unomaha.edu/blogs/zac
+Version: 1.0
+Tags: responsive, white, bootstrap
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+This simple theme was built using the example Bootstrap theme "Basic marketing site" found on the Bootstrap web site http://twitter.github.com/bootstrap/examples/hero.html
+Moreless
+*/
+
+
+
+/* --------------------------------------------------
+BODY
+-------------------------------------------------- */
+body {
+    background-image: url("img/bg.png");
+    background-repeat: repeat;
+    color: #444d3d;
+
+}
+
+li a, li span {
+    color: #444d3d; /* text color */
+}
+
+li {
+    color: #8dc63f; /* bullet color */
+}
+
+button {
+    border: none;
+}
+
+.container {
+    padding-top: 10px;
+}
+
+.contact.span4 {
+    padding: 5px;
+}
+
+/* --------------------------------------------------
+TOP NAVIGATION
+-------------------------------------------------- */
+.social {
+    float: left;
+}
+
+.current-menu-item>a,
+.current-menu-parent>a,
+.current-menu-ancestor>a,
+.current-page-ancestor>a,
+.current-page-parent>a,
+.current-page-item>a,
+.current_page_ancestor>a,
+.current_page_parent>a,
+.current_page_item>a, /* WP current item. */
+.navbar .nav li>a:hover,
+.navbar .nav li>a:active,
+.navbar .nav li>a:focus {
+    border-bottom: solid 3px #8dc63f;
+    color: #444d3d;
+}
+
+
+
+/* --------------------------------------------------
+SIDE NAVIGATION
+-------------------------------------------------- */
+.span3 ul {
+    list-style: none;
+    padding-top: 1em;
+}
+
+.span3 ul li {
+    line-height: 2em;
+}
+
+.span3 {
+    background-color: #ffffff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.span3 ul li a {
+    color: #444d3d;
+}
+
+.span3 ul li a:hover {
+    color: #444d3d;
+    border-bottom: solid 3px #8dc63f;
+    text-decoration: none;
+}
+
+/* --------------------------------------------------
+CONTENT NAVIGATION
+-------------------------------------------------- */
+.span8 p a:hover {
+    border-bottom: solid 3px #8dc63f;
+    text-decoration: none;
+}
+
+
+.span8 p a {
+    font-weight: bold;
+    font-size: 1em;
+    color: #8dc63f;
+    text-transform: capitalize;
+}
+
+/* --------------------------------------------------
+CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+.carousel {
+    margin-bottom: 60px;
+}
+
+.carousel .container {
+    position: relative;
+    z-index: 9;
+}
+
+.carousel-control {
+    height: 80px;
+    margin-top: 0;
+    font-size: 120px;
+    background-color: transparent;
+    border: 0;
+    z-index: 10;
+}
+
+.carousel .item {
+}
+
+.carousel .image {
+    position: absolute;
+    padding-top: 10px;
+    margin-left: 5em;
+}
+
+.carousel-caption {
+    background-color: transparent;
+    position: static;
+    /*max-width: 550px;
+    padding: 0 20px;
+    margin-top: 200px;*/
+}
+.carousel-caption h1,
+.carousel-caption .lead {
+    line-height: 1.25em;
+    color: #444d3d;
+    font-size: 1.25em;
+    width: 85%;
+}
+
+
+
+/* --------------------------------------------------
+MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .span4 {
+    text-align: center;
+    background-color: white;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    padding-bottom: 1em;
+    min-height: 15em;
+}
+.marketing h2 {
+    font-weight: bold;
+    font-size: 1.35em;
+    color: #8dc63f;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    line-height: 1em;
+}
+.marketing .span4 p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.marketing h4 {
+    font-weight: lighter;
+    font-size: 1.5em;
+    color: #8dc63f;
+    margin-top: -10px;
+}
+
+.container.marketing {
+    padding-bottom: 40px;
+}
+
+/* --------------------------------------------------
+CONTENT
+-------------------------------------------------- */
+.span8 h5, .span10 h5 {
+    padding-top: 2em;
+}
+h5 a {
+    color:#444d3d;
+}
+
+/* --------------------------------------------------
+RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width: 979px) {
+
+    .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+    }
+    .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+    }
+
+    .carousel .item {
+    }
+
+    .carousel .image {
+        position: absolute;
+        padding-top: 30px;
+        margin-left: 5em;
+    }
+
+    .featurette {
+        height: auto;
+        padding: 0;
+    }
+    .featurette-image.pull-left,
+    .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .marketing .span4 {
+        padding-top: 5px;
+    }
+
+    .brand {
+        /*width: 150px;*/
+    }
+    .navbar-inner {
+        margin: -20px;
+    }
+
+    .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .carousel .container {
+
+    }
+    .carousel .item {
+    }
+
+    .carousel .image {
+        display: none;
+
+    }
+
+    .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 5px;
+    }
+    .carousel-caption h1 {
+        font-size: 30px;
+    }
+    .carousel-caption .lead,
+    .carousel-caption .btn {
+        font-size: 18px;
+    }
+
+    .marketing .span4 + .span4 {
+        margin-top: 40px;
+    }
+
+    .featurette-heading {
+        font-size: 30px;
+    }
+    .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+
+}
+
+
+/* --------------------------------------------------
+STICKY FOOTER
+-------------------------------------------------- */
+#footer p {
+    padding-top: 70px;
+    color:white;
+}
+
+#footer a {
+    color: #ffffff;
+}
+
+html,
+body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -200px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+    height: 200px;
+}
+#footer {
+    background-image: url("img/grass.png");
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #push,
+    #footer {
+        height: 230px;
+    }
+}
+
+/* --------------------------------------------------
+CONTACT FORM
+-------------------------------------------------- */
+input#name.span3 {
+    width: 100%;
+    border: none;
+    height: 45px;
+    padding-left: 15px;
+}
+input#email.span3 {
+    width: 100%;
+    border: none;
+    height: 45px;
+    padding-left: 15px;
+}
+textarea#message.span6 {
+    width: 100%;
+    border: none;
+    padding-left: 15px;
+}
+
+.contact.span4 {
+    margin-top: 63px;
+    text-align: left;
+    padding-top: 15px;
+}
+
+select#Councils {
+    width: 100%;
+}
