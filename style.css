@@ -22,21 +22,34 @@ BODY
 body {
     background-image: url("img/bg.png");
     background-repeat: repeat;
-    color: #444d3d;
-
+   color: #444d3d;
 }
 
 li a, li span {
     color: #444d3d; /* text color */
 }
 
-li {
-    color: #8dc63f; /* bullet color */
-}
+
 
 button {
     border: none;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    color: black;
+}
+
+
+.page_title {
+    font-weight: bold;
+    font-size: 1.6em;
+    color: #8dc63f;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    line-height: 1em;
+}
+
+
 
 .container {
     padding-top: 10px;
@@ -44,6 +57,43 @@ button {
 
 .contact.span4 {
     padding: 5px;
+}
+
+
+/* --------------------------------------------------
+CONTENT NAVIGATION
+-------------------------------------------------- */
+.post_content a:hover {
+    border-bottom: solid 3px #8dc63f;
+    text-decoration: none;
+}
+
+
+.post_content a {
+
+    font-size: 1em;
+    color: #8dc63f;
+    text-transform: capitalize;
+}
+
+
+h1 {
+    font-size: 1.6em;
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.4em;
+}
+h4 {
+    font-size: 1.3em;
+}
+h5 {
+    font-size: 1.2em;
+}
+h6 {
+    font-size: 1em;
 }
 
 /* --------------------------------------------------
@@ -74,47 +124,46 @@ TOP NAVIGATION
 /* --------------------------------------------------
 SIDE NAVIGATION
 -------------------------------------------------- */
-.span3 ul {
-    list-style: none;
-    padding-top: 1em;
-}
-
-.span3 ul li {
-    line-height: 2em;
-}
-
-.span3 {
+.sidebar {
     background-color: #ffffff;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
+    padding: 6px;
 }
 
-.span3 ul li a {
+
+.sidebar>ul {
+    list-style: none;
+    padding-top: 1em;
+}
+
+.sidebar>ul>li {
+    line-height: 2em;
+}
+
+.sidebar>ul>li ul {
+    margin-left: 10px;
+}
+.sidebar>ul>li li {
+    list-style: none;
+    line-height: 1.5em;
+}
+
+.sidebar a {
     color: #444d3d;
 }
 
-.span3 ul li a:hover {
+.sidebar a:hover {
     color: #444d3d;
     border-bottom: solid 3px #8dc63f;
     text-decoration: none;
 }
 
-/* --------------------------------------------------
-CONTENT NAVIGATION
--------------------------------------------------- */
-.span8 p a:hover {
-    border-bottom: solid 3px #8dc63f;
-    text-decoration: none;
-}
+/* Only display children of current 2nd level depth */
+.sidebar .children { display: none; }
+.sidebar .current_page_ancestor>.children,.current_page_item>.children { display: block;}
 
-
-.span8 p a {
-    font-weight: bold;
-    font-size: 1em;
-    color: #8dc63f;
-    text-transform: capitalize;
-}
 
 /* --------------------------------------------------
 CAROUSEL
@@ -387,3 +436,88 @@ textarea#message.span6 {
 select#Councils {
     width: 100%;
 }
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+

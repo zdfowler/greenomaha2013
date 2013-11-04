@@ -1,7 +1,6 @@
 
 <?php get_header(); ?>
-
-<div class="container marketing">
+<div class="container">
     <div class="row-fluid">
         <div class="span8">
             <?php if (have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -11,17 +10,16 @@
             <?php the_content(); ?>
             <hr>
             <?php comments_template(); ?>
+
+
+            <?php endwhile; else: ?>
+                <p><?php _e('Sorry! No there are no posts.');?></p>
+            <?php endif; ?>
         </div>
-
-
-        <?php get_sidebar(); ?>
-
-        <?php endwhile; else: ?>
-            <p><?php _e('Sorry! That page does not exist.');?></p>
-        <?php endif; ?>
-
-    </div>
+        <?php get_sidebar('blog') ?>
+     </div>
 </div>
+
 
 <div id="push"></div>
 

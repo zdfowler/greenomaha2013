@@ -1,20 +1,18 @@
 <?php
-if($post->post_parent)
-    $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
-else
-    $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
-if ($children) { ?>
-    <div class="side span3 offset1">
-    <ul>
-        <?php echo $children; ?>
-    </ul>
+/*
+1. All sub pages of top-level page: if subpages exist.
+2. Then, for each one of those, if I'm in it, display all children.
+*/
 
-
-    </div>
-<?php }
-
+  $children = wp_list_pages('title_li=&child_of='.get_post_top_ancestor_id().'&echo=0');
+  if ($children) {
+      ?>
+      <div class="sidebar span3 offset1">
+          <ul>
+              <?php echo $children; ?>
+          </ul>
+      </div>
+        <?php
+  }
 ?>
 
-<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
-
-<?php endif; ?>
